@@ -1,9 +1,15 @@
-const navEl = document.querySelector('#categories');
-console.log(navEl);
-// console.log(navEl.children);
+const ulEl = document.querySelector('#categories');
 
-const navItemEl = document.querySelectorAll('.item');
-console.log(navItemEl);
+const categoriesSum = ul => ul.querySelectorAll(".item").length;
 
-const text = document.querySelector('#categories');
-console.log(text.textContent);
+console.log("Number of categories: ", categoriesSum(ulEl));
+
+const categoryName = ul => {
+    const categoriesUl= ul.querySelectorAll(".item")
+    categoriesUl.forEach(item => {
+    console.log("Category:", item.querySelector("h2").textContent);
+    console.log("Elements:", item.querySelectorAll("ul li").length);
+    });
+}
+
+categoryName(ulEl)
