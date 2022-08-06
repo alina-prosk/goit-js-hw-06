@@ -10,18 +10,20 @@ const counterValue = {
     },
 };
 
-const decrementBtn = document.queryCommandIndeterm('#decrement');
-const incrementBtn = document.queryCommandIndeterm('#increment');
+const decrementBtn = document.querySelector('button[data-action="decrement"]');
+const incrementBtn = document.querySelector('button[data-action="increment"]');
 const valueEl = document.querySelector('#value');
 
-decrementBtn.addEventListener('click', function () {
+console.log(decrementBtn);
+
+decrementBtn.addEventListener('click', function() {
 
     counterValue.decrement();
     console.log(counter);
     valueEl.textContent = counterValue.value;
 });
 
-incrementBtn.addEventListener('click', function () {
+incrementBtn.addEventListener('click', function() {
     
     counterValue.increment();
     console.log(counterValue);
