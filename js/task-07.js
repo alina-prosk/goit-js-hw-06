@@ -4,3 +4,4 @@ const refs = {
 };
 
 refs.input.addEventListener('input', (evt) => refs.span.style.fontSize = `${evt.currentTarget.value}px`);
+refs.span.style.fontSize = `${refs.input.value}px`;
